@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">CaptiveMonitor</string>
+    <string name="app_title">Captive Monitor</string>
+
+    <string name="start_new">Agregar nuevo ambiente</string>
+    <string name="start_list">Mis ambientes</string>
+
+    <string name="new_select">Seleccione tipo de animal para monitorear</string>
+    <string name="new_fish">Peces</string>
+    <string name="new_frog">Sapitos</string>
+    <string name="new_turtle">Tortugas</string>
+    <string name="new_lizard">Lagartijas</string>
+    <string name="new_custom">Personalizar parámetros</string>
+
+    <string name="param_hint">Ajuste los rangos de parámetros que necesita su mascota</string>
+    <string name="param_soil">Sensores de tierra</string>
+    <string name="param_room">Sensores ambientales</string>
+    <string name="param_water">Sensores de agua</string>
+    <string name="param_humidity">Humedad ( % )</string>
+    <string name="param_temperature">Temperatura ( C° )</string>
+    <string name="param_water_level">Nivel de agua ( % )</string>
+    <string name="param_min">Min</string>
+    <string name="param_max">Máx</string>
+    <string name="param_min_hint_humi">humedad mínima</string>
+    <string name="param_max_hint_humi">humedad máxima</string>
+    <string name="param_min_hint_temp">temperatura mínima</string>
+    <string name="param_max_hint_temp">temperatura máxima</string>
+    <string name="param_min_hint_water_lv">nivel agua mínimo</string>
+    <string name="param_max_hint_water_lv">nivel agua máximo</string>
+    <string name="param_enable">Activar</string>
+    <string name="param_disable">Desactivar</string>
+    <string name="param_next">Siguiente</string>
+    <string name="param_save">Guardar</string>
+    <string name="param_cancel">Cancelar</string>
+
+    <string name="name_give_a_name">Dale un nombre a tu nuevo ambiente</string>
+    <string name="name_choose_icon">Selecciona un ícono</string>
+    <string name="name_default_fish">Acuario peces</string>
+    <string name="name_default_frog">Terrario sapos</string>
+    <string name="name_default_turtle">Acuario tortuga</string>
+    <string name="name_default_lizard">Terrario lagarto</string>
+    <string name="name_default_custom">Mi ambiente</string>
+
+    <string name="room_list_text">Lista de ambientes</string>
+
+    <string name="monitor_legend">Leyenda</string>
+    <string name="monitor_legend_green">Estable</string>
+    <string name="monitor_legend_yellow">Revisar</string>
+    <string name="monitor_legend_red">Alerta</string>
+    <string name="monitor_legend_gray">Desconectado</string>
+    <string name="monitor_legend_white">Inactivo</string>
+    <string name="monitor_legend_green_desc">dentro del rango</string>
+    <string name="monitor_legend_yellow_desc">saliendo del rango</string>
+    <string name="monitor_legend_red_desc">fuera de rango</string>
+    <string name="monitor_legend_gray_desc">no se detecta el sensor</string>
+    <string name="monitor_legend_white_desc">desactivado en este ambiente</string>
+    <string name="monitor_edit">Editar sensores</string>
+    <string name="monitor_soil">Tierra</string>
+    <string name="monitor_room">Ambiente</string>
+    <string name="monitor_water">Agua</string>
+    <string name="monitor_min">Min</string>
+    <string name="monitor_max">Máx</string>
+    <string name="monitor_humidity">Humedad ( % )</string>
+    <string name="monitor_temperature">Temperatura ( C° )</string>
+    <string name="monitor_water_level">Nivel ( % )</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="legend_okay">#00E676</color>
+    <color name="legend_warning">#FFCC00</color>
+    <color name="legend_danger">#FF3636</color>
+    <color name="legend_disconnected">#808080</color>
+    <color name="legend_disabled">#22FFFFFF</color>
+    <color name="legend_text_okay">@color/black</color>
+    <color name="legend_text_warning">@color/black</color>
+    <color name="legend_text_danger">@color/white</color>
+    <color name="legend_text_disconnected">@color/white</color>
+    <color name="legend_text_disabled">@color/black</color>
+
+    <color name="primary">#80D8FF</color>
+    <color name="primary_light">#B5FFFF</color>
+    <color name="primary_dark">#49A7CC</color>
+
+    <color name="secondary">#00E676</color>
+    <color name="secondary_light">#66FFA6</color>
+    <color name="secondary_dark">#00B248</color>
+</resources>
