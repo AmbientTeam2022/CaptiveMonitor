@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
+            android:name=".SetDeviceActivity"
+            android:exported="true" />
+        <activity
             android:name=".MonitorActivity"
             android:exported="true" />
         <activity

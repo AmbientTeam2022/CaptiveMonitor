@@ -5,6 +5,9 @@
     <string name="start_new">Agregar nuevo ambiente</string>
     <string name="start_list">Mis ambientes</string>
 
+    <string name="device_text">Seleccione el dispositivo</string>
+    <string name="device_hint">Ingrese el ID del dispositivo</string>
+
     <string name="new_select">Seleccione tipo de animal para monitorear</string>
     <string name="new_fish">Peces</string>
     <string name="new_frog">Sapitos</string>
