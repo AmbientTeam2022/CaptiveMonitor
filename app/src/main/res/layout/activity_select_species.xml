@@ -38,6 +38,7 @@
         android:insetBottom="6dp"
         android:minHeight="60dp"
         android:text="@string/new_fish"
+        android:onClick="comenzarPersonalizar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,6 +74,7 @@
         android:insetBottom="6dp"
         android:minHeight="60dp"
         android:text="@string/new_turtle"
+        android:onClick="comenzarPersonalizar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,6 +92,7 @@
         android:insetBottom="6dp"
         android:minHeight="60dp"
         android:text="@string/new_lizard"
+        android:onClick="comenzarPersonalizar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -129,4 +132,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
