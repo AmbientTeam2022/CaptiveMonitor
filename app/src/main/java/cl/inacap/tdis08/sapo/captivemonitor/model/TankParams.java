@@ -1,6 +1,8 @@
 package cl.inacap.tdis08.sapo.captivemonitor.model;
 
-public class TankParams {
+import java.io.Serializable;
+
+public class TankParams implements Serializable {
 
     private Range soilHumidity;
     private Range soilTemperature;

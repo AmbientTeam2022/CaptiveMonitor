@@ -1,6 +1,8 @@
 package cl.inacap.tdis08.sapo.captivemonitor.model;
 
-public class Range {
+import java.io.Serializable;
+
+public class Range implements Serializable {
     private int min;
     private int max;
 

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import cl.inacap.tdis08.sapo.captivemonitor.model.TankParams;
 import cl.inacap.tdis08.sapo.captivemonitor.model.TankPreset;
 import cl.inacap.tdis08.sapo.captivemonitor.util.Presets;
 
@@ -24,6 +26,8 @@ public class SetParamsActivity extends AppCompatActivity {
     private EditText edittext_water_min_temp;
     private EditText edittext_water_max_temp;
 
+    String tankUuid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,8 @@ public class SetParamsActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         String species = bundle.getString("species");
+        tankUuid = bundle.getString("uuid");
+        Log.i("uuid", tankUuid);
 
         TankPreset p = Presets.get(Presets.Species.valueOf(species));
 
@@ -71,6 +77,33 @@ public class SetParamsActivity extends AppCompatActivity {
 
     public void siguiente(View view) {
         Intent intent = new Intent(this, SetNameIconActivity.class);
+
+        int soil_min_humidity = Integer.parseInt(edittext_soil_min_humidity.getText().toString());
+        int soil_max_humidity = Integer.parseInt(edittext_soil_max_humidity.getText().toString());
+        int soil_min_temp = Integer.parseInt(edittext_soil_min_temp.getText().toString());
+        int soil_max_temp = Integer.parseInt(edittext_soil_max_temp.getText().toString());
+        int room_min_humidity = Integer.parseInt(edittext_room_min_humidity.getText().toString());
+        int room_max_humidity = Integer.parseInt(edittext_room_max_humidity.getText().toString());
+        int room_min_temp = Integer.parseInt(edittext_room_min_temp.getText().toString());
+        int room_max_temp = Integer.parseInt(edittext_room_max_temp.getText().toString());
+        int water_min_level = Integer.parseInt(edittext_water_min_level.getText().toString());
+        int water_max_level = Integer.parseInt(edittext_water_max_level.getText().toString());
+        int water_min_temp = Integer.parseInt(edittext_water_min_temp.getText().toString());
+        int water_max_temp = Integer.parseInt(edittext_water_max_temp.getText().toString());
+
+        TankParams tankParams = new TankParams(new TankPreset(new int[][] {
+                {soil_min_humidity, soil_max_humidity},
+                {soil_min_temp, soil_max_temp},
+                {room_min_humidity, room_max_humidity},
+                {room_min_temp, room_max_temp},
+                {water_min_level, water_max_level},
+                {water_min_temp, water_max_temp}
+        }));
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("tankParams", tankParams);
+        bundle.putString("uuid", tankUuid);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

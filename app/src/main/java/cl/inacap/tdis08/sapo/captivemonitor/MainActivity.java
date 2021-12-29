@@ -21,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void comenzar(View view) {
 
-        Intent intent = new Intent(this, SelectSpeciesActivity.class);
+        Intent intent = new Intent(this, SetDeviceActivity.class);
         //intent.putExtras(intent);
         startActivity(intent);
 
     }
 
     public void comenzar2(View view) {
-        Intent intent = new Intent(this, RoomListActivity.class);
+        Intent intent = new Intent(this, TankListActivity.class);
         startActivity(intent);
     }
 }

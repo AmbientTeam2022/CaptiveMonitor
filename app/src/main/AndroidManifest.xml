@@ -14,27 +14,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
-            android:name=".SetDeviceActivity"
-            android:exported="true" />
-        <activity
             android:name=".MonitorActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RoomListActivity"
             android:exported="true"
-            android:theme="@style/Theme.Main" />
+            android:parentActivityName=".TankListActivity" />
+        <activity
+            android:name=".TankListActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SetNameIconActivity"
             android:exported="true"
-            android:theme="@style/Theme.Main" />
+            android:parentActivityName=".SetDeviceActivity" />
         <activity
             android:name=".SetParamsActivity"
             android:exported="true"
-            android:theme="@style/Theme.Main" />
+            android:parentActivityName=".SetDeviceActivity" />
         <activity
             android:name=".SelectSpeciesActivity"
             android:exported="true"
-            android:theme="@style/Theme.Main" />
+            android:parentActivityName=".SetDeviceActivity"/>
+        <activity
+            android:name=".SetDeviceActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

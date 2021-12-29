@@ -7,7 +7,7 @@ public class Tank {
     private int iconId;
     private String actionCache;
     private TankState state;
-    private TankParams parameters;
+    private TankParams params;
 
     public Tank() {
     }
@@ -24,6 +24,13 @@ public class Tank {
         this.iconId = iconId;
         this.actionCache = actionCache;
         this.state = state;
+    }
+
+    public Tank(String uuid, String name, int iconId, TankParams params) {
+        this.uuid = uuid;
+        this.name = name;
+        this.iconId = iconId;
+        this.params = params;
     }
 
     public String getUuid() {
@@ -66,12 +73,12 @@ public class Tank {
         this.state = state;
     }
 
-    public TankParams getParameters() {
-        return parameters;
+    public TankParams getParams() {
+        return params;
     }
 
-    public void setParameters(TankParams parameters) {
-        this.parameters = parameters;
+    public void setParams(TankParams params) {
+        this.params = params;
     }
 
     @Override

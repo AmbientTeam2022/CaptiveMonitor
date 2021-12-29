@@ -13,6 +13,7 @@ public class Presets {
 
     public static Map<Species, TankPreset> presets;
     static {
+        presets = new HashMap<>();
         presets.put(Species.FISH,
                 new TankPreset(new int[][]
                         {{0,0},{0,0},{0,0},{0,0},{70,95},{20,23}}

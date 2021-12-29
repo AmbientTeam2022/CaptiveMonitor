@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import cl.inacap.tdis08.sapo.captivemonitor.model.Tank;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface CMonitorAPI {
@@ -14,5 +16,8 @@ public interface CMonitorAPI {
 
     @GET("/api/monitor/{tankId}")
     Call<Tank> getTank(@Path("tankId") String uuid);
+
+    @POST("/api/save")
+    Call<Tank> createTank(@Body Tank tank);
 
 }

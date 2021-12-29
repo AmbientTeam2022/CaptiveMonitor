@@ -7,11 +7,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.time.LocalTime;
-import java.util.ArrayList;
 
 import cl.inacap.tdis08.sapo.captivemonitor.model.Tank;
 import cl.inacap.tdis08.sapo.captivemonitor.model.TankParams;
@@ -100,6 +99,14 @@ public class MonitorActivity extends AppCompatActivity {
                         Tank tank = response.body();
                         TankState state = tank.getState();
 
+                        // Si el dispositivo aún no ha enviado los primeros datos
+                        if (state == null) {
+                            Toast.makeText(getApplicationContext(),
+                                    "Esperando datos...",
+                                    Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
                         textSoilCurrentHumidity.setText(Integer.toString(state.getSoilHumidity()));
                         textSoilCurrentTemp.setText(Integer.toString(state.getSoilTemperature()));
                         textRoomCurrentHumidity.setText(Integer.toString(state.getRoomHumidity()));
@@ -109,7 +116,7 @@ public class MonitorActivity extends AppCompatActivity {
                         Log.i("INFO", "Actualización: " + LocalTime.now());
 
                         if (!paramsLoaded) {
-                            tankParams = tank.getParameters();
+                            tankParams = tank.getParams();
                             textSoilMinHumidity.setText(Integer.toString(tankParams.getSoilHumidity().getMin()));
                             textSoilMaxHumidity.setText(Integer.toString(tankParams.getSoilHumidity().getMax()));
                             textSoilMinTemp.setText(Integer.toString(tankParams.getSoilTemperature().getMin()));

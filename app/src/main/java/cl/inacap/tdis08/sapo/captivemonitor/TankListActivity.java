@@ -24,7 +24,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RoomListActivity extends AppCompatActivity {
+public class TankListActivity extends AppCompatActivity {
 
     private ArrayList<Tank> tankData;
 
