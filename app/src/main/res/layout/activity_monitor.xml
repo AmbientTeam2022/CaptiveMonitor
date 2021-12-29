@@ -83,7 +83,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView39"
+                                android:id="@+id/text_soil_min_humidity"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
@@ -118,7 +118,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView40"
+                                android:id="@+id/text_soil_max_humidity"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
@@ -166,7 +166,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView44"
+                                android:id="@+id/text_soil_min_temp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"
@@ -201,7 +201,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView47"
+                                android:id="@+id/text_soil_max_temp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.8"

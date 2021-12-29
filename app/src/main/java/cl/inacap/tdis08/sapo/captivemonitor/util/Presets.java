@@ -31,6 +31,10 @@ public class Presets {
                 ));
     }
 
+    public static TankPreset get(Species species) {
+        return presets.get(species);
+    }
+
 }
 
 //soilHumidity, soilTemperature, roomHumidity, roomTemperature, waterLevel, waterTemperature,

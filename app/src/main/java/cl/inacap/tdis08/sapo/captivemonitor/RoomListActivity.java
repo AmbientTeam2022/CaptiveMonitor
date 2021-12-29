@@ -3,6 +3,7 @@ package cl.inacap.tdis08.sapo.captivemonitor;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 import cl.inacap.tdis08.sapo.captivemonitor.adapter.TankListAdapter;
 import cl.inacap.tdis08.sapo.captivemonitor.model.Tank;
 import cl.inacap.tdis08.sapo.captivemonitor.retrofit.CMonitorAPI;
+import cl.inacap.tdis08.sapo.captivemonitor.util.Presets;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -80,8 +82,15 @@ public class RoomListActivity extends AppCompatActivity {
             // hacer cosas
         });
 
-        adapter.setOnViewButtonListener((position) -> {
-           // hacer cosas
+        adapter.setOnViewButtonListener(new TankListAdapter.ViewListener() {
+            @Override
+            public void onViewButtonListener(int position) {
+                Intent intent = new Intent(getApplicationContext(), MonitorActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("uuid", tankData.get(position).getUuid());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
         });
     }
 }
