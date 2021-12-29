@@ -16,7 +16,7 @@ public class Presets {
         presets.put(Species.FISH,
                 new TankPreset(new int[][]
                         {{0,0},{0,0},{0,0},{0,0},{70,95},{20,23}}
-                        ));
+                ));
         presets.put(Species.FROG,
                 new TankPreset(new int[][]
                         {{0,0},{0,0},{60,90},{24,30},{0,0},{0,0}}
@@ -31,6 +31,11 @@ public class Presets {
                 ));
     }
 
+    public static TankPreset get(Species species) {
+        return presets.get(species);
+    }
+
 }
+
 
 //soilHumidity, soilTemperature, roomHumidity, roomTemperature, waterLevel, waterTemperature,
