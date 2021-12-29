@@ -102,7 +102,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView37"
+                            android:id="@+id/text_soil_current_humidity"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"
@@ -185,7 +185,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView43"
+                            android:id="@+id/text_soil_current_temp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"
@@ -282,7 +282,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/text_room_humidity"
+                            android:id="@+id/text_room_current_humidity"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"
@@ -365,7 +365,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/text_room_temp"
+                            android:id="@+id/text_room_current_temp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"
@@ -462,7 +462,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/text_water_level"
+                            android:id="@+id/text_water_current_level"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"
@@ -545,7 +545,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/text_water_temp"
+                            android:id="@+id/text_water_current_temp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1.6"

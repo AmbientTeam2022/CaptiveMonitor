@@ -7,6 +7,7 @@ public class Tank {
     private int iconId;
     private String actionCache;
     private TankState state;
+    private TankParams parameters;
 
     public Tank() {
     }
@@ -63,6 +64,14 @@ public class Tank {
 
     public void setState(TankState state) {
         this.state = state;
+    }
+
+    public TankParams getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(TankParams parameters) {
+        this.parameters = parameters;
     }
 
     @Override

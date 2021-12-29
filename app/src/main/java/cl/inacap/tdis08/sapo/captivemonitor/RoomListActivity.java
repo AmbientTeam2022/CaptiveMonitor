@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 import cl.inacap.tdis08.sapo.captivemonitor.adapter.TankListAdapter;
 import cl.inacap.tdis08.sapo.captivemonitor.model.Tank;
+import cl.inacap.tdis08.sapo.captivemonitor.retrofit.APIClient;
 import cl.inacap.tdis08.sapo.captivemonitor.retrofit.CMonitorAPI;
 import cl.inacap.tdis08.sapo.captivemonitor.util.Presets;
 import retrofit2.Call;
@@ -35,14 +36,7 @@ public class RoomListActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.room_list_text);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ArrayList<Tank> data = new ArrayList<Tank>();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://104.131.186.247:3000/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        CMonitorAPI servicio = retrofit.create(CMonitorAPI.class);
+        CMonitorAPI servicio = APIClient.getClient().create(CMonitorAPI.class);
         Call<ArrayList<Tank>> call = servicio.listTanks();
 
         call.enqueue(new Callback<ArrayList<Tank>>() {

@@ -47,6 +47,7 @@
     <string name="room_list_text">Lista de ambientes</string>
     <string name="room_list_view">Ver</string>
 
+    <string name="monitor_title">Monitoreo del ambiente</string>
     <string name="monitor_legend">Leyenda</string>
     <string name="monitor_legend_green">Estable</string>
     <string name="monitor_legend_yellow">Revisar</string>
