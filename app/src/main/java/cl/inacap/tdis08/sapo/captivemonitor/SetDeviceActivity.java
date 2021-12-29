@@ -23,4 +23,6 @@ public class SetDeviceActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SetNameIconActivity.class);
         startActivity(intent);
     }
+
 }
+

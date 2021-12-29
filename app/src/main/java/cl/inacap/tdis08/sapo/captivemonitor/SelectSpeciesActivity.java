@@ -26,6 +26,33 @@ public class SelectSpeciesActivity extends AppCompatActivity {
 
     public void comenzarPersonalizar(View view) {
         Intent intent = new Intent(this, SetParamsActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("species", Species.CUSTOM.toString());
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    public void comenzarPeces(View view) {
+        Intent intent = new Intent(this, SetParamsActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("species", Species.FISH.toString());
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    public void comenzarTortugas(View view) {
+        Intent intent = new Intent(this, SetParamsActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("species", Species.TURTLE.toString());
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    public void comenzarLagartijas(View view) {
+        Intent intent = new Intent(this, SetParamsActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("species", Species.TURTLE.toString());
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
