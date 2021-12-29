@@ -1,10 +1,12 @@
 package cl.inacap.tdis08.sapo.captivemonitor;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static cl.inacap.tdis08.sapo.captivemonitor.util.Presets.Species;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SelectSpeciesActivity extends AppCompatActivity {
 
@@ -14,9 +16,11 @@ public class SelectSpeciesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_species);
     }
 
-
     public void comenzarSapitos(View view) {
         Intent intent = new Intent(this, MonitorActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("species", Species.FROG.toString());
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
