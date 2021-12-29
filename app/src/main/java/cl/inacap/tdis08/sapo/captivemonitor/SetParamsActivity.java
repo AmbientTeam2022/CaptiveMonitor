@@ -53,18 +53,18 @@ public class SetParamsActivity extends AppCompatActivity {
         edittext_water_min_temp = (EditText) findViewById(R.id.edittext_water_min_temp);
         edittext_water_max_temp = (EditText) findViewById(R.id.edittext_water_max_temp);
 
-        edittext_soil_min_humidity.setText(Integer.toString(p.getSoilHumidity().getMin()));
-        edittext_soil_max_humidity.setText(Integer.toString(p.getSoilHumidity().getMax()));
-        edittext_soil_min_temp.setText(Integer.toString(p.getSoilTemperature().getMin()));
-        edittext_soil_max_temp.setText(Integer.toString(p.getSoilTemperature().getMax()));
-        edittext_room_min_humidity.setText(Integer.toString(p.getRoomHumidity().getMin()));
-        edittext_room_max_humidity.setText(Integer.toString(p.getRoomHumidity().getMax()));
-        edittext_room_min_temp.setText(Integer.toString(p.getRoomTemperature().getMin()));
-        edittext_room_max_temp.setText(Integer.toString(p.getRoomTemperature().getMax()));
-        edittext_water_min_level.setText(Integer.toString(p.getWaterLevel().getMin()));
-        edittext_water_max_level.setText(Integer.toString(p.getWaterLevel().getMax()));
-        edittext_water_min_temp.setText(Integer.toString(p.getWaterTemperature().getMin()));
-        edittext_water_max_temp.setText(Integer.toString(p.getWaterTemperature().getMax()));
+        edittext_soil_min_humidity.setText(Double.toString(p.getSoilHumidity().getMin()));
+        edittext_soil_max_humidity.setText(Double.toString(p.getSoilHumidity().getMax()));
+        edittext_soil_min_temp.setText(Double.toString(p.getSoilTemperature().getMin()));
+        edittext_soil_max_temp.setText(Double.toString(p.getSoilTemperature().getMax()));
+        edittext_room_min_humidity.setText(Double.toString(p.getRoomHumidity().getMin()));
+        edittext_room_max_humidity.setText(Double.toString(p.getRoomHumidity().getMax()));
+        edittext_room_min_temp.setText(Double.toString(p.getRoomTemperature().getMin()));
+        edittext_room_max_temp.setText(Double.toString(p.getRoomTemperature().getMax()));
+        edittext_water_min_level.setText(Double.toString(p.getWaterLevel().getMin()));
+        edittext_water_max_level.setText(Double.toString(p.getWaterLevel().getMax()));
+        edittext_water_min_temp.setText(Double.toString(p.getWaterTemperature().getMin()));
+        edittext_water_max_temp.setText(Double.toString(p.getWaterTemperature().getMax()));
 
 
     }
@@ -78,20 +78,20 @@ public class SetParamsActivity extends AppCompatActivity {
     public void siguiente(View view) {
         Intent intent = new Intent(this, SetNameIconActivity.class);
 
-        int soil_min_humidity = Integer.parseInt(edittext_soil_min_humidity.getText().toString());
-        int soil_max_humidity = Integer.parseInt(edittext_soil_max_humidity.getText().toString());
-        int soil_min_temp = Integer.parseInt(edittext_soil_min_temp.getText().toString());
-        int soil_max_temp = Integer.parseInt(edittext_soil_max_temp.getText().toString());
-        int room_min_humidity = Integer.parseInt(edittext_room_min_humidity.getText().toString());
-        int room_max_humidity = Integer.parseInt(edittext_room_max_humidity.getText().toString());
-        int room_min_temp = Integer.parseInt(edittext_room_min_temp.getText().toString());
-        int room_max_temp = Integer.parseInt(edittext_room_max_temp.getText().toString());
-        int water_min_level = Integer.parseInt(edittext_water_min_level.getText().toString());
-        int water_max_level = Integer.parseInt(edittext_water_max_level.getText().toString());
-        int water_min_temp = Integer.parseInt(edittext_water_min_temp.getText().toString());
-        int water_max_temp = Integer.parseInt(edittext_water_max_temp.getText().toString());
+        double soil_min_humidity = Double.parseDouble(edittext_soil_min_humidity.getText().toString());
+        double soil_max_humidity = Double.parseDouble(edittext_soil_max_humidity.getText().toString());
+        double soil_min_temp = Double.parseDouble(edittext_soil_min_temp.getText().toString());
+        double soil_max_temp = Double.parseDouble(edittext_soil_max_temp.getText().toString());
+        double room_min_humidity = Double.parseDouble(edittext_room_min_humidity.getText().toString());
+        double room_max_humidity = Double.parseDouble(edittext_room_max_humidity.getText().toString());
+        double room_min_temp = Double.parseDouble(edittext_room_min_temp.getText().toString());
+        double room_max_temp = Double.parseDouble(edittext_room_max_temp.getText().toString());
+        double water_min_level = Double.parseDouble(edittext_water_min_level.getText().toString());
+        double water_max_level = Double.parseDouble(edittext_water_max_level.getText().toString());
+        double water_min_temp = Double.parseDouble(edittext_water_min_temp.getText().toString());
+        double water_max_temp = Double.parseDouble(edittext_water_max_temp.getText().toString());
 
-        TankParams tankParams = new TankParams(new TankPreset(new int[][] {
+        TankParams tankParams = new TankParams(new TankPreset(new double[][] {
                 {soil_min_humidity, soil_max_humidity},
                 {soil_min_temp, soil_max_temp},
                 {room_min_humidity, room_max_humidity},

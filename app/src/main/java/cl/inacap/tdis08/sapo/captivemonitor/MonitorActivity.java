@@ -81,7 +81,7 @@ public class MonitorActivity extends AppCompatActivity {
 
         CMonitorAPI service = APIClient.getClient().create(CMonitorAPI.class);
 
-        timer = new CountDownTimer(30000,1000) {
+        timer = new CountDownTimer(5000,1000) {
             @Override
             public void onTick(long l) {
 
@@ -107,28 +107,31 @@ public class MonitorActivity extends AppCompatActivity {
                             return;
                         }
 
-                        textSoilCurrentHumidity.setText(Integer.toString(state.getSoilHumidity()));
-                        textSoilCurrentTemp.setText(Integer.toString(state.getSoilTemperature()));
-                        textRoomCurrentHumidity.setText(Integer.toString(state.getRoomHumidity()));
-                        textRoomCurrentTemp.setText(Integer.toString(state.getRoomTemperature()));
-                        textWaterCurrentLevel.setText(Integer.toString(state.getWaterLevel()));
-                        textWaterCurrentTemp.setText(Integer.toString(state.getWaterTemperature()));
+                        textSoilCurrentHumidity.setText(Double.toString(state.getSoilHumidity()));
+                        textSoilCurrentTemp.setText(Double.toString(state.getSoilTemperature()));
+                        textRoomCurrentHumidity.setText(Double.toString(state.getRoomHumidity()));
+                        textRoomCurrentTemp.setText(Double.toString(state.getRoomTemperature()));
+                        textWaterCurrentLevel.setText(Double.toString(state.getWaterLevel()));
+                        textWaterCurrentTemp.setText(Double.toString(state.getWaterTemperature()));
                         Log.i("INFO", "Actualización: " + LocalTime.now());
 
                         if (!paramsLoaded) {
                             tankParams = tank.getParams();
-                            textSoilMinHumidity.setText(Integer.toString(tankParams.getSoilHumidity().getMin()));
-                            textSoilMaxHumidity.setText(Integer.toString(tankParams.getSoilHumidity().getMax()));
-                            textSoilMinTemp.setText(Integer.toString(tankParams.getSoilTemperature().getMin()));
-                            textSoilMaxTemp.setText(Integer.toString(tankParams.getSoilTemperature().getMax()));
-                            textRoomMinHumidity.setText(Integer.toString(tankParams.getRoomHumidity().getMin()));
-                            textRoomMaxHumidity.setText(Integer.toString(tankParams.getRoomHumidity().getMax()));
-                            textRoomMinTemp.setText(Integer.toString(tankParams.getRoomTemperature().getMin()));
-                            textRoomMaxTemp.setText(Integer.toString(tankParams.getRoomTemperature().getMax()));
-                            textWaterMinLevel.setText(Integer.toString(tankParams.getWaterLevel().getMin()));
-                            textWaterMaxLevel.setText(Integer.toString(tankParams.getWaterLevel().getMax()));
-                            textWaterMinTemp.setText(Integer.toString(tankParams.getWaterTemperature().getMin()));
-                            textWaterMaxTemp.setText(Integer.toString(tankParams.getWaterTemperature().getMax()));
+
+                            if (tankParams == null) return;
+
+                            textSoilMinHumidity.setText(Double.toString(tankParams.getSoilHumidity().getMin()));
+                            textSoilMaxHumidity.setText(Double.toString(tankParams.getSoilHumidity().getMax()));
+                            textSoilMinTemp.setText(Double.toString(tankParams.getSoilTemperature().getMin()));
+                            textSoilMaxTemp.setText(Double.toString(tankParams.getSoilTemperature().getMax()));
+                            textRoomMinHumidity.setText(Double.toString(tankParams.getRoomHumidity().getMin()));
+                            textRoomMaxHumidity.setText(Double.toString(tankParams.getRoomHumidity().getMax()));
+                            textRoomMinTemp.setText(Double.toString(tankParams.getRoomTemperature().getMin()));
+                            textRoomMaxTemp.setText(Double.toString(tankParams.getRoomTemperature().getMax()));
+                            textWaterMinLevel.setText(Double.toString(tankParams.getWaterLevel().getMin()));
+                            textWaterMaxLevel.setText(Double.toString(tankParams.getWaterLevel().getMax()));
+                            textWaterMinTemp.setText(Double.toString(tankParams.getWaterTemperature().getMin()));
+                            textWaterMaxTemp.setText(Double.toString(tankParams.getWaterTemperature().getMax()));
                             paramsLoaded = true;
                         }
 

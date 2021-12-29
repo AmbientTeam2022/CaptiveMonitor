@@ -12,7 +12,7 @@ public class TankPreset {
     public TankPreset() {
     }
 
-    public TankPreset(int[][] ranges) {
+    public TankPreset(double[][] ranges) {
         setSoilHumidity      (ranges[0][0], ranges[0][1]);
         setSoilTemperature   (ranges[1][0], ranges[1][1]);
         setRoomHumidity      (ranges[2][0], ranges[2][1]);
@@ -45,27 +45,27 @@ public class TankPreset {
         return waterTemperature;
     }
 
-    public void setSoilHumidity(int min, int max) {
+    public void setSoilHumidity(Double min, Double max) {
         this.soilHumidity = new Range(min, max);
     }
 
-    public void setSoilTemperature(int min, int max) {
+    public void setSoilTemperature(Double min, Double max) {
         this.soilTemperature = new Range(min, max);;
     }
 
-    public void setRoomHumidity(int min, int max) {
+    public void setRoomHumidity(Double min, Double max) {
         this.roomHumidity = new Range(min, max);;
     }
 
-    public void setRoomTemperature(int min, int max) {
+    public void setRoomTemperature(Double min, Double max) {
         this.roomTemperature = new Range(min, max);;
     }
 
-    public void setWaterLevel(int min, int max) {
+    public void setWaterLevel(Double min, Double max) {
         this.waterLevel = new Range(min, max);;
     }
 
-    public void setWaterTemperature(int min, int max) {
+    public void setWaterTemperature(Double min, Double max) {
         this.waterTemperature = new Range(min, max);;
     }
 
