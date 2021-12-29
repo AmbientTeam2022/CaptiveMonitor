@@ -38,4 +38,9 @@ dependencies {
 
     // OutlineTextView
     implementation 'com.github.iamBedant:OutlineTextView:1.0.5'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 }

@@ -45,6 +45,7 @@
     <string name="name_default_custom">Mi ambiente</string>
 
     <string name="room_list_text">Lista de ambientes</string>
+    <string name="room_list_view">Ver</string>
 
     <string name="monitor_legend">Leyenda</string>
     <string name="monitor_legend_green">Estable</string>
