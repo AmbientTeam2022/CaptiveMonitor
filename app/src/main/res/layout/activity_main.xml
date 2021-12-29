@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnAgregarAmbiente"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -37,6 +38,7 @@
         android:insetTop="6dp"
         android:insetBottom="6dp"
         android:minHeight="60dp"
+        android:onClick="comenzar"
         android:text="@string/start_new"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,6 +55,7 @@
         android:layout_marginEnd="60dp"
         android:minHeight="60dp"
         android:text="@string/start_list"
+        android:onClick="comenzar2"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
